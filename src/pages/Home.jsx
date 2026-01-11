@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
 import Canvas from '@react-three/fiber';
-import Loader from '../components';
+import { Loader } from "../components/Loader";
 
 // It is the popup element which we will use later on
 {/* <div className='absolute top-28 left-0 right-0 z-10 flex 
@@ -16,7 +16,11 @@ const Home = () => {
                 camera={{ near: 0.1, far: 1000 }}
             >
                 <Suspense fallback={<Loader />}>
-
+                    <directionalLight />
+                    <ambientLight />
+                    <pointLight />
+                    <spotLight />
+                    <hemisphereLight />
                 </Suspense>
             </Canvas>
         </section>
