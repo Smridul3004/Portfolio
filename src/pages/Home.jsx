@@ -1,6 +1,7 @@
 import React, { Suspense } from 'react';
-import Canvas from '@react-three/fiber';
-import { Loader } from "../components/Loader";
+import { Canvas } from '@react-three/fiber';
+import Loader from "../components/Loader.jsx";
+import Island from '../models/island';
 
 // It is the popup element which we will use later on
 {/* <div className='absolute top-28 left-0 right-0 z-10 flex 
@@ -21,6 +22,7 @@ const Home = () => {
                     <pointLight />
                     <spotLight />
                     <hemisphereLight />
+                    <Island />
                 </Suspense>
             </Canvas>
         </section>
