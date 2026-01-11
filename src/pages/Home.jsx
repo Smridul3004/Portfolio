@@ -36,11 +36,18 @@ const Home = () => {
                 camera={{ near: 0.1, far: 1000 }}
             >
                 <Suspense fallback={<Loader />}>
-                    <directionalLight />
-                    <ambientLight />
-                    <pointLight />
-                    <spotLight />
-                    <hemisphereLight />
+                    {/* directionalLight simulates the light coming from the distant source like Sun */}
+                    <directionalLight position={[1, 1, 1]} intensity={2} />
+                    {/* ambientLight illuminates all objects in the scene equally without casating shadows so we do not have coordinates here */}
+                    <ambientLight intensity={0.5} />
+                    {/* pointLight emits light in all directions from a single source. Here we do not need it !! */}
+                    {/* <pointLight /> */}
+
+                    {/* Similar to pointLight but in this case it emits light from a source in the shape of a cone so you can provide angle i.e. solid angle here. Wont be needed here*/}
+                    {/* <spotLight /> */}
+
+                    {/* hemisphereLight illuminates the scene with a gradient */}
+                    <hemisphereLight skyColor="#b1e1ff" groundColor="#000000" intensity={1} />
                     <Island
                         position={islandPosition}
                         scale={islandScale}
