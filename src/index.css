@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 @theme {
     --color-gray-200: #D5DAE1;
@@ -174,7 +174,7 @@ body:has(.card[data-color="green"]:hover) {
 }
 
 /* Neo Brutalism */
-.neo-brutalism-blue {
+/* .neo-brutalism-blue {
     background: #2b77e7;
     position: relative;
     border-radius: 10px;
@@ -188,4 +188,4 @@ body:has(.card[data-color="green"]:hover) {
     border: #fff;
     box-shadow: 0.6vmin 0.6vmin #fff, 1vmin 1vmin #d2e4ff, 1vmin 1vmin #d2e4ff,
         0.65vmin 1vmin #d2e4ff, 1vmin 0.65vmin #d2e4ff;
-}
+} */
