@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React, { useState, Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import Loader from "../components/Loader.jsx";
 import Island from '../models/Island.jsx';
@@ -14,6 +14,9 @@ items-center justify-center'>
 
 const Home = () => {
 
+    // creating state for rotation feature
+    // for it we will first change the class in canvas to dynamic class and use useEffect feature
+    const [isRotating, setIsRotating] = useState(false);
     // will help website to work on different devices
     const adjustIslandForScreenSize = () => {
         let screenScale = null;
@@ -35,7 +38,7 @@ const Home = () => {
     return (
         <section className='w-full h-screen relative'>
             <Canvas
-                className='w-full h-screen bg-transparent'
+                className={`w-full h-screen bg-transparent ${isRotating ? `cursor-grabbing` : `cursor-grab`}`}
                 camera={{ near: 0.1, far: 1000 }}
             >
                 <Suspense fallback={<Loader />}>
@@ -58,6 +61,8 @@ const Home = () => {
                         position={islandPosition}
                         scale={islandScale}
                         rotatoin={islandRotation}
+                        isRotating={isRotating}
+                        setIsRotating={setIsRotating}
                     />
                     <Plane />
                 </Suspense>
