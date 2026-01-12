@@ -1,10 +1,16 @@
-/* @import "tailwindcss"; */
+@import "tailwindcss";
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-/* @tailwind base;
-@tailwind components; */
-@tailwind utilities;
+@theme {
+    --color-gray-200: #D5DAE1;
+    --color-black: #000;
+    --color-black-500: #1D2235;
+    --color-blue-500: #2b77e7;
+    --font-family-worksans: "Work Sans", sans-serif;
+    --font-family-poppins: Poppins, sans-serif;
+    --box-shadow-card: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+}
 
 :root {
     --blue-rgb: 237 245 255;
