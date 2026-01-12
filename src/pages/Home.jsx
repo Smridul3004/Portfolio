@@ -17,6 +17,7 @@ const Home = () => {
     // creating state for rotation feature
     // for it we will first change the class in canvas to dynamic class and use useEffect feature
     const [isRotating, setIsRotating] = useState(false);
+    const [currentStage, setCurrentStage] = useState(1); // New state for current stage
 
 
     // will help island model to work on different devices
@@ -84,6 +85,7 @@ const Home = () => {
                         scale={islandScale}
                         rotation={islandRotation}
                         isRotating={isRotating}
+                        setCurrentStage={setCurrentStage}
                         setIsRotating={setIsRotating}
                     />
                     <Plane
