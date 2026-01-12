@@ -1,18 +1,19 @@
 @import "tailwindcss";
 
-/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-@theme {
+:root {
     --color-gray-200: #D5DAE1;
     --color-black: #000;
     --color-black-500: #1D2235;
     --color-blue-500: #2b77e7;
-    --font-family-worksans: "Work Sans", sans-serif;
-    --font-family-poppins: Poppins, sans-serif;
-    --box-shadow-card: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
-}
 
-:root {
+    /* Register custom fonts for Tailwind v4 */
+    --font-worksans: "Work Sans", sans-serif;
+    --font-poppins: Poppins, sans-serif;
+
+    --box-shadow-card: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+
     --blue-rgb: 237 245 255;
     --green-rgb: 125 161 35;
 }
@@ -35,11 +36,13 @@ body:has(.card[data-color="green"]:hover) {
     }
 
     .head-text {
-        @apply sm:text-5xl text-3xl font-semibold sm:leading-snug font-poppins;
+        @apply sm:text-5xl text-3xl font-semibold sm:leading-snug;
+        font-family: Poppins, sans-serif;
     }
 
     .subhead-text {
-        @apply font-semibold sm:text-3xl text-xl relative font-poppins;
+        @apply font-semibold sm:text-3xl text-xl relative;
+        font-family: Poppins, sans-serif;
     }
 
     .blue-gradient_text {
@@ -47,11 +50,13 @@ body:has(.card[data-color="green"]:hover) {
     }
 
     .input {
-        @apply bg-white border border-gray-200 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mt-2.5 font-normal shadow-card;
+        @apply bg-white border border-gray-200 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mt-2.5 font-normal;
+        box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
     }
 
     .textarea {
-        @apply block p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:ring-blue-500 focus:border-blue-500 mt-2.5 font-normal shadow-card;
+        @apply block p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:ring-blue-500 focus:border-blue-500 mt-2.5 font-normal;
+        box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
     }
 
     .btn {
@@ -71,7 +76,12 @@ body:has(.card[data-color="green"]:hover) {
     }
 
     .info-box {
-        @apply mx-5 relative flex text-white flex-col gap-3 max-w-2xl neo-brutalism-blue pt-4 pb-12 px-8;
+        @apply mx-5 relative flex text-white flex-col gap-3 max-w-2xl pt-4 pb-12 px-8;
+        background: #2b77e7;
+        border-radius: 10px;
+        border: #2b77e7;
+        box-shadow: 0.6vmin 0.6vmin #336cc1, 1vmin 1vmin #0092db, 1vmin 1vmin #0092db,
+            0.65vmin 1vmin #0092db, 1vmin 0.65vmin #0092db;
     }
 
     .neo-btn {
@@ -83,7 +93,8 @@ body:has(.card[data-color="green"]:hover) {
     }
 
     .cta-text {
-        @apply text-black-500 font-extrabold flex-1 text-3xl max-md:text-center;
+        @apply font-extrabold flex-1 text-3xl max-md:text-center;
+        color: #1D2235;
     }
 }
 
@@ -173,8 +184,7 @@ body:has(.card[data-color="green"]:hover) {
     transform: translateZ(80px) translateY(-5px) rotateX(15deg) rotateY(15deg);
 }
 
-/* Neo Brutalism */
-/* .neo-brutalism-blue {
+.neo-brutalism-blue {
     background: #2b77e7;
     position: relative;
     border-radius: 10px;
@@ -188,4 +198,4 @@ body:has(.card[data-color="green"]:hover) {
     border: #fff;
     box-shadow: 0.6vmin 0.6vmin #fff, 1vmin 1vmin #d2e4ff, 1vmin 1vmin #d2e4ff,
         0.65vmin 1vmin #d2e4ff, 1vmin 0.65vmin #d2e4ff;
-} */
+}
