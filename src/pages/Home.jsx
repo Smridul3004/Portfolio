@@ -17,7 +17,9 @@ const Home = () => {
     // creating state for rotation feature
     // for it we will first change the class in canvas to dynamic class and use useEffect feature
     const [isRotating, setIsRotating] = useState(false);
-    // will help website to work on different devices
+
+
+    // will help island model to work on different devices
     const adjustIslandForScreenSize = () => {
         let screenScale = null;
         let screenPosition = [0, -6.5, -43];
@@ -33,7 +35,27 @@ const Home = () => {
         return [screenScale, screenPosition, screenRotation];
     }
 
+    // adjusting plane model:
+    const adjustPlaneForScreenSize = () => {
+        let screenScale, screenPosition;
+        // let screenRotation = [0.1, 4.7, 0]; // No need in plane model
+
+        if (window.innerWidth < 768) {
+            screenScale = [1.5, 1.5, 1.5];
+            screenPosition = [0, -1.5, 0];
+        }
+        else {
+            screenScale = [3, 3, 3];
+            screenPosition = [0, -4, -4];
+        }
+
+        return [screenScale, screenPosition];
+    }
+
+
     const [islandScale, islandPosition, islandRotation] = adjustIslandForScreenSize();
+    const [planeScale, planePosition] = adjustPlaneForScreenSize();
+
 
     return (
         <section className='w-full h-screen relative'>
@@ -60,11 +82,16 @@ const Home = () => {
                     <Island
                         position={islandPosition}
                         scale={islandScale}
-                        rotatoin={islandRotation}
+                        rotation={islandRotation}
                         isRotating={isRotating}
                         setIsRotating={setIsRotating}
                     />
-                    <Plane />
+                    <Plane
+                        isRotating={isRotating}
+                        planeScale={planeScale}
+                        planePosition={planePosition}
+                        rotation={[0, 20, 0]}
+                    />
                 </Suspense>
             </Canvas>
         </section>
