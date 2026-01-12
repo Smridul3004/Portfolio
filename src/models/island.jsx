@@ -43,13 +43,13 @@ const Island = ({ isRotating, setIsRotating, setCurrentStage, ...props }) => {
     const handlePointerMove = (e) => {
         e.stopPropagation();
         e.preventDefault();
-        setIsRotating(true);
+        // setIsRotating(true);
 
         if (isRotating) {
             const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+            const delta = (clientX - lastX.current) / viewport.width;
             lastX.current = clientX;
 
-            const delta = (clientX - lastX.current) / viewport.width;
             islandRef.current.rotation.y += delta * 0.01 * Math.PI;
             rotationSpeed.current = delta * 0.01 * Math.PI; // Store the rotation speed
         }
