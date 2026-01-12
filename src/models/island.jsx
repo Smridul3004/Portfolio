@@ -53,6 +53,7 @@ const Island = ({ isRotating, setIsRotating, ...props }) => {
         if (isRotating) handlePointerUp(e);
     }
 
+
     return (
         // a.group means animated 
         <a.group ref={islandRef} {...props} >
