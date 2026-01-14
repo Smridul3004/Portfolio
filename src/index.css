@@ -2,7 +2,7 @@
 
 @import "tailwindcss";
 
-:root {
+@theme {
     --color-gray-200: #D5DAE1;
     --color-black: #000;
     --color-black-500: #1D2235;
@@ -30,71 +30,232 @@ body:has(.card[data-color="green"]:hover) {
     background-color: rgb(var(--green-rgb) / 25%);
 }
 
-@layer utilities {
-    .max-container {
-        @apply max-w-5xl mx-auto sm:p-16 pb-12 !pt-[126px] px-8 min-h-[calc(100vh-80px)];
+@utility max-container {
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 3rem;
+    padding-top: 126px !important;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    min-height: calc(100vh - 80px);
+
+    @media (min-width: 640px) {
+        padding: 4rem;
+        padding-top: 126px !important;
+    }
+}
+
+@utility head-text {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 600;
+    font-family: Poppins, sans-serif;
+
+    @media (min-width: 640px) {
+        font-size: 3rem;
+        line-height: 1.2;
+    }
+}
+
+@utility subhead-text {
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    position: relative;
+    font-family: Poppins, sans-serif;
+
+    @media (min-width: 640px) {
+        font-size: 1.875rem;
+        line-height: 2.25rem;
+    }
+}
+
+@utility blue-gradient_text {
+    background-image: linear-gradient(to right, #00c6ff, #0072ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+@utility input {
+    background-color: white;
+    border: 1px solid #D5DAE1;
+    color: #111827;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    border-radius: 0.5rem;
+    display: block;
+    width: 100%;
+    padding: 0.625rem;
+    margin-top: 0.625rem;
+    font-weight: 400;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+
+    &:focus {
+        outline: none;
+        ring: 2px solid #2b77e7;
+        border-color: #2b77e7;
+    }
+}
+
+@utility textarea {
+    display: block;
+    padding: 0.625rem;
+    width: 100%;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: #111827;
+    background-color: white;
+    border-radius: 0.5rem;
+    border: 1px solid #D5DAE1;
+    margin-top: 0.625rem;
+    font-weight: 400;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+
+    &:focus {
+        outline: none;
+        ring: 2px solid #2b77e7;
+        border-color: #2b77e7;
+    }
+}
+
+@utility btn {
+    color: white;
+    background-image: linear-gradient(to right, #00c6ff, #0072ff);
+    font-weight: 500;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    width: 100%;
+    padding: 0.625rem 1.25rem;
+    text-align: center;
+
+    @media (min-width: 640px) {
+        width: auto;
     }
 
-    .head-text {
-        @apply sm:text-5xl text-3xl font-semibold sm:leading-snug;
-        font-family: Poppins, sans-serif;
+    &:focus {
+        outline: none;
+        ring: 4px solid rgba(59, 130, 246, 0.5);
+    }
+}
+
+@utility header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    top: 0;
+    background-color: transparent;
+    z-index: 10;
+    right: 0;
+    left: 0;
+
+    @media (min-width: 640px) {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+}
+
+@utility footer {
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 1.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+
+    @media (min-width: 640px) {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+}
+
+@utility footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.75rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@utility info-box {
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+    position: relative;
+    display: flex;
+    color: white;
+    flex-direction: column;
+    gap: 0.75rem;
+    max-width: 42rem;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background: #2b77e7;
+    border-radius: 10px;
+    border: #2b77e7;
+    box-shadow: 0.6vmin 0.6vmin #336cc1, 1vmin 1vmin #0092db, 1vmin 1vmin #0092db,
+        0.65vmin 1vmin #0092db, 1vmin 0.65vmin #0092db;
+}
+
+@utility neo-btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    color: #2b77e7;
+    text-align: center;
+    font-weight: 600;
+    width: 90%;
+    bottom: -1.25rem;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+
+    @media (min-width: 640px) {
+        width: 50%;
+    }
+}
+
+@utility cta {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.75rem;
+    margin-top: 2rem;
+
+    @media (min-width: 640px) {
+        margin-top: 4rem;
     }
 
-    .subhead-text {
-        @apply font-semibold sm:text-3xl text-xl relative;
-        font-family: Poppins, sans-serif;
+    @media (min-width: 768px) {
+        flex-direction: row;
     }
+}
 
-    .blue-gradient_text {
-        @apply bg-gradient-to-r from-[#00c6ff] to-[#0072ff] bg-clip-text text-transparent;
-    }
+@utility cta-text {
+    font-weight: 800;
+    flex: 1 1 0%;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    color: #1D2235;
 
-    .input {
-        @apply bg-white border border-gray-200 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mt-2.5 font-normal;
-        box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
-    }
-
-    .textarea {
-        @apply block p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:ring-blue-500 focus:border-blue-500 mt-2.5 font-normal;
-        box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
-    }
-
-    .btn {
-        @apply text-white bg-gradient-to-r from-[#00c6ff] to-[#0072ff] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center;
-    }
-
-    .header {
-        @apply flex justify-between items-center sm:px-16 px-8 py-4 max-w-5xl mx-auto absolute top-0 bg-transparent z-10 right-0 left-0;
-    }
-
-    .footer {
-        @apply max-w-5xl mx-auto sm:px-16 pb-6 px-8 flex flex-col gap-7;
-    }
-
-    .footer-container {
-        @apply flex flex-wrap gap-7 items-center justify-between;
-    }
-
-    .info-box {
-        @apply mx-5 relative flex text-white flex-col gap-3 max-w-2xl pt-4 pb-12 px-8;
-        background: #2b77e7;
-        border-radius: 10px;
-        border: #2b77e7;
-        box-shadow: 0.6vmin 0.6vmin #336cc1, 1vmin 1vmin #0092db, 1vmin 1vmin #0092db,
-            0.65vmin 1vmin #0092db, 1vmin 0.65vmin #0092db;
-    }
-
-    .neo-btn {
-        @apply py-3 px-6 rounded-lg text-blue-500 text-center font-semibold sm:w-1/2 w-[90%] -bottom-5 absolute mx-auto right-0 left-0 flex justify-center items-center gap-3;
-    }
-
-    .cta {
-        @apply w-full flex items-center md:flex-row flex-col sm:mt-16 mt-8 gap-7;
-    }
-
-    .cta-text {
-        @apply font-extrabold flex-1 text-3xl max-md:text-center;
-        color: #1D2235;
+    @media (max-width: 768px) {
+        text-align: center;
     }
 }
 
