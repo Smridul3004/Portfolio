@@ -1,6 +1,7 @@
 import React from 'react'
 import { skills } from '../constants'
 import ExperienceTimeline from '../components/ExperienceTimeline'
+import CTA from '../components/CTA'
 
 const About = () => {
     return (
@@ -48,6 +49,11 @@ const About = () => {
 
                 <ExperienceTimeline />
             </div>
+
+            <hr className='border-slate-200' />
+
+            {/* Todo: Create A CTA to contact me section */}
+            <CTA />
         </section>
     )
 }
