@@ -4,6 +4,8 @@ import { Canvas } from '@react-three/fiber'
 import { Suspense } from 'react';
 import { Fox } from '../models/fox.jsx';
 import Loader from '../components/Loader.jsx';
+import useAlert from '../hooks/useAlert.js';
+import Alert from '../components/Alert.jsx';
 
 const Contact = () => {
 
@@ -15,6 +17,7 @@ const Contact = () => {
     });
     const [isLoading, setIsLoading] = useState(false);
     const [currentAnimation, setCurrentAnimation] = useState('Idle');
+    const { alertMessage, showAlert, hideAlert } = useAlert();
 
     const handleChange = (e) => {
         // Handle form input changes
@@ -46,9 +49,10 @@ const Contact = () => {
             import.meta.env.VITE_EMAILJS_PUBLIC_KEY
         ).then(() => {
             setIsLoading(false);
-            alert('Message sent successfully!');
-
+            // alert('Message sent successfully!');
+            showAlert({ show: true, text: 'Message sent successfully!', type: 'success' });
             setTimeout(() => {
+                hideAlert();
                 setCurrentAnimation('Idle');
                 setFormData({ name: '', email: '', message: '' });
             }, [3000]);
@@ -56,13 +60,17 @@ const Contact = () => {
         }).catch((error) => {
             setIsLoading(false);
             setCurrentAnimation('Idle');
-            alert('Failed to send message. Please try again.');
+            showAlert({ show: true, text: 'Failed to send message. Please try again.', type: 'danger' });
             console.error('EmailJS error:', error);
+
         });
     }
 
     return (
         <section className='relative flex lg:flex-row flex-col max-container'>
+
+            {alertMessage.show && <Alert {...alertMessage} />}
+
             <div className='flex-1 min-w-[50%] flex flex-col'>
 
                 <h1 className='head-text'>Get In Touch</h1>
