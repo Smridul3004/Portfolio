@@ -1,4 +1,4 @@
-import React, { useState, Suspense } from 'react';
+import React, { useState, Suspense, useEffect, useRef } from 'react';
 import { Canvas } from '@react-three/fiber';
 import Loader from "../components/Loader.jsx";
 import Island from '../models/Island.jsx';
@@ -6,8 +6,31 @@ import Sky from '../models/Sky.jsx';
 import Bird from '../models/Bird.jsx';
 import Plane from '../models/Plane.jsx';
 import HomeInfo from '../components/HomeInfo.jsx';
+import sakura from '../assets/sakura.mp3';
+import soundon from '../assets/icons/soundon.png';
+import soundoff from '../assets/icons/soundoff.png';
 
 const Home = () => {
+
+    // // sakura background music setup
+    // const audioRef = useRef(new Audio(sakura));
+    // audio.Ref.current.volume = 0.1; // Set volume to 10%
+    // audioRef.current.loop = true; // Enable looping
+    // const [isAudioPlaying, setIsAudioPlaying] = useState(false);
+    // useEffect(() => {
+    //     if (isAudioPlaying) {
+    //         audioRef.current.play();
+    //     }
+    //     return () => {
+    //         audioRef.current.pause();
+    //     }
+    // }, [isAudioPlaying]);
+
+    // // A button or toggle to start/stop the music:
+    // const toggleAudio = () => {
+    //     setIsAudioPlaying(!isAudioPlaying);
+    // }
+
 
     // creating state for rotation feature
     // for it we will first change the class in canvas to dynamic class and use useEffect feature
@@ -95,6 +118,11 @@ const Home = () => {
                     />
                 </Suspense>
             </Canvas>
+
+            {/* button to toggle audio
+            <div>
+                <img src="soundon" alt="" />
+            </div> */}
         </section>
     )
 }
