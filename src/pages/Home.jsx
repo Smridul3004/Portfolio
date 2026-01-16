@@ -12,24 +12,24 @@ import soundoff from '../assets/icons/soundoff.png';
 
 const Home = () => {
 
-    // // sakura background music setup
-    // const audioRef = useRef(new Audio(sakura));
-    // audio.Ref.current.volume = 0.1; // Set volume to 10%
-    // audioRef.current.loop = true; // Enable looping
-    // const [isAudioPlaying, setIsAudioPlaying] = useState(false);
-    // useEffect(() => {
-    //     if (isAudioPlaying) {
-    //         audioRef.current.play();
-    //     }
-    //     return () => {
-    //         audioRef.current.pause();
-    //     }
-    // }, [isAudioPlaying]);
+    // sakura background music setup
+    const audioRef = useRef(new Audio(sakura));
+    audioRef.current.volume = 0.1; // Set volume to 10%
+    audioRef.current.loop = true; // Enable looping
+    const [isAudioPlaying, setIsAudioPlaying] = useState(false);
+    useEffect(() => {
+        if (isAudioPlaying) {
+            audioRef.current.play();
+        }
+        return () => {
+            audioRef.current.pause();
+        }
+    }, [isAudioPlaying]);
 
-    // // A button or toggle to start/stop the music:
-    // const toggleAudio = () => {
-    //     setIsAudioPlaying(!isAudioPlaying);
-    // }
+    // A button or toggle to start/stop the music:
+    const toggleAudio = () => {
+        setIsAudioPlaying(!isAudioPlaying);
+    }
 
 
     // creating state for rotation feature
@@ -119,10 +119,14 @@ const Home = () => {
                 </Suspense>
             </Canvas>
 
-            {/* button to toggle audio
-            <div>
-                <img src="soundon" alt="" />
-            </div> */}
+            {/* button to toggle audio */}
+            <div className='absolute bottom-2 left-2'>
+                <img
+                    src={isAudioPlaying ? soundon : soundoff}
+                    alt="sound"
+                    onClick={toggleAudio}
+                    className="w-10 h-10 cursor-pointer object-contain" />
+            </div>
         </section>
     )
 }
