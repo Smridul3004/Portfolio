@@ -46,7 +46,7 @@ const Projects = () => {
                                     rel='noopener noreferrer'
                                     className='font-semibold text-blue-600'
                                 >
-                                    Live Link &rarr;
+                                    Source Code &rarr;
                                 </Link>
                             </div>
                         </div>
