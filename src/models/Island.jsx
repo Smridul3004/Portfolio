@@ -136,17 +136,23 @@ const Island = ({ isRotating, setIsRotating, setCurrentStage, ...props }) => {
         canvas.addEventListener('pointerdown', handlePointerDown);
         canvas.addEventListener('pointerup', handlePointerUp);
         canvas.addEventListener('pointermove', handlePointerMove);
+        canvas.addEventListener('touchstart', handlePointerDown);
+        canvas.addEventListener('touchend', handlePointerUp);
+        canvas.addEventListener('touchmove', handlePointerMove);
         document.addEventListener('keydown', handleKeyDown);
         document.addEventListener('keyup', handleKeyUp);
         return () => {
             canvas.removeEventListener('pointerdown', handlePointerDown);
             canvas.removeEventListener('pointerup', handlePointerUp);
             canvas.removeEventListener('pointermove', handlePointerMove);
+            canvas.removeEventListener('touchstart', handlePointerDown);
+            canvas.removeEventListener('touchend', handlePointerUp);
+            canvas.removeEventListener('touchmove', handlePointerMove);
             document.removeEventListener('keydown', handleKeyDown);
             document.removeEventListener('keyup', handleKeyUp);
         }
-
-    }, [gl, handlePointerDown, handlePointerUp, handlePointerMove]);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [gl, isRotating]);
 
     return (
         // a.group means animated 
