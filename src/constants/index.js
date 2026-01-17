@@ -148,7 +148,7 @@ export const experiences = [
         date: "May 2023 - July 2023",
         points: [
             "Conducted comprehensive market research across Airbnb, Booking.com, and MakeMyTrip to identify potential homestay partners.",
-            "Successfully onboarded [number] hotels and homestays by highlighting Vacaow's competitive 1% host fee advantage.",
+            "Successfully onboarded 28 hotels and homestays by highlighting Vacaow's competitive 1% host fee advantage.",
             "Executed targeted outreach campaigns to property owners, emphasizing cost savings compared to competitors charging 3-5% fees.",
             // "Participating in code reviews and providing constructive feedback to other developers.",
         ],
