@@ -121,12 +121,12 @@ const Home = () => {
             </Canvas>
 
             {/* button to toggle audio */}
-            <div className='absolute bottom-2 left-2'>
+            <div className='absolute bottom-5 left-5 z-20'>
                 <img
                     src={isAudioPlaying ? soundon : soundoff}
                     alt="sound"
                     onClick={toggleAudio}
-                    className="w-10 h-10 cursor-pointer object-contain" />
+                    className="w-12 h-12 cursor-pointer object-contain" />
             </div>
         </section>
     )

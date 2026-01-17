@@ -18,6 +18,12 @@
     --green-rgb: 125 161 35;
 }
 
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
 body {
     font-family: "Work Sans", sans-serif;
 }
@@ -36,9 +42,10 @@ body:has(.card[data-color="green"]:hover) {
     margin-right: auto;
     padding-bottom: 3rem;
     padding-top: 126px !important;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     min-height: calc(100vh - 80px);
+    box-sizing: border-box;
 
     @media (min-width: 640px) {
         padding: 4rem;
