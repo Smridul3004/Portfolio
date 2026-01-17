@@ -23,7 +23,11 @@ import {
     summiz,
     tailwindcss,
     threads,
-    typescript
+    typescript,
+    insta,
+    LNMIIT,
+    vacaow,
+    despo
 } from "../assets/icons";
 
 export const skills = [
@@ -111,57 +115,57 @@ export const skills = [
 
 export const experiences = [
     {
-        title: "React.js Developer",
-        company_name: "Starbucks",
-        icon: starbucks,
-        iconBg: "#accbe1",
-        date: "March 2020 - April 2021",
-        points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
-        ],
-    },
-    {
-        title: "React Native Developer",
-        company_name: "Tesla",
-        icon: tesla,
+        title: "Teaching Assistant - ISL Lab",
+        company_name: "LNMIIT",
+        icon: LNMIIT,
         iconBg: "#fbc3bc",
-        date: "Jan 2021 - Feb 2022",
+        date: "Jan 2024 - April 2024",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Guided students in Linux fundamentals including file management, shell scripting, and command-line operations.",
+            "Taught Python programming essentials covering data types, control structures, and NumPy for numerical computing.",
+            "Instructed data science foundations including Pandas for data manipulation and Matplotlib for visualization.",
+            "Provided hands-on guidance in machine learning concepts using Scikit-Learn library and supervised practical sessions.",
         ],
     },
     {
-        title: "Web Developer",
-        company_name: "Shopify",
-        icon: shopify,
-        iconBg: "#b7e4c7",
-        date: "Jan 2022 - Jan 2023",
+        title: "Sponsorship Head",
+        company_name: "Desportivos - LNMIIT",
+        icon: despo,
+        iconBg: "#b3b3b3",
+        date: "Aug 2023 - Jan 2024",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Led sponsorship acquisition efforts, securing ₹30L in funding from 11 partners.",
+            "Created and presented targeted sponsorship proposals, achieving 50% conversion rate through strategic outreach.",
+            "Coordinated sponsor deliverables and maintained ongoing communication to ensure partnership satisfaction.",
+            "Managed cross-functional collaboration with organizing team to successfully execute the festival for 4000 participants.",
         ],
     },
     {
-        title: "Full stack Developer",
-        company_name: "Meta",
-        icon: meta,
-        iconBg: "#a2d2ff",
-        date: "Jan 2023 - Present",
+        title: "Business Development Intern",
+        company_name: "Vacaow",
+        icon: vacaow,
+        iconBg: "#accbe1",
+        date: "May 2023 - July 2023",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Conducted comprehensive market research across Airbnb, Booking.com, and MakeMyTrip to identify potential homestay partners.",
+            "Successfully onboarded [number] hotels and homestays by highlighting Vacaow's competitive 1% host fee advantage.",
+            "Executed targeted outreach campaigns to property owners, emphasizing cost savings compared to competitors charging 3-5% fees.",
+            // "Participating in code reviews and providing constructive feedback to other developers.",
         ],
     },
+    // {
+    //     title: "Full stack Developer",
+    //     company_name: "Meta",
+    //     icon: meta,
+    //     iconBg: "#a2d2ff",
+    //     date: "Jan 2023 - Present",
+    //     points: [
+    //         "Developing and maintaining web applications using React.js and other related technologies.",
+    //         "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+    //         "Implementing responsive design and ensuring cross-browser compatibility.",
+    //         "Participating in code reviews and providing constructive feedback to other developers.",
+    //     ],
+    // },
 ];
 
 export const socialLinks = [
@@ -179,50 +183,55 @@ export const socialLinks = [
         name: 'LinkedIn',
         iconUrl: linkedin,
         link: 'https://www.linkedin.com/in/mridul-sharma-78843120a',
+    },
+    {
+        name: 'Instagram',
+        iconUrl: insta,
+        link: 'https://www.instagram.com/mxridul/',
     }
 ];
 
 export const projects = [
+    // {
+    //     iconUrl: pricewise,
+    //     theme: 'btn-back-red',
+    //     name: 'Instagram Saved Content Analyzer Chrome Extension',
+    //     description: 'Developed a web application that tracks and notifies users of price changes for products on Amazon, helping users find the best deals.',
+    //     link: 'https://github.com/Smridul3004/Instagram-Saved-Content-Analyzer-Chrome-Extension',
+    // },
+    // {
+    //     iconUrl: threads,
+    //     theme: 'btn-back-green',
+    //     name: 'Full Stack Threads Clone',
+    //     description: 'Created a full-stack replica of the popular discussion platform "Threads," enabling users to post and engage in threaded conversations.',
+    //     link: 'https://github.com/Smridul3004/Alumni-Connect-Platform',
+    // },
     {
-        iconUrl: pricewise,
-        theme: 'btn-back-red',
-        name: 'Amazon Price Tracker',
-        description: 'Developed a web application that tracks and notifies users of price changes for products on Amazon, helping users find the best deals.',
-        link: 'https://github.com/Smridul3004/Instagram-Saved-Content-Analyzer-Chrome-Extension',
-    },
-    {
-        iconUrl: threads,
-        theme: 'btn-back-green',
-        name: 'Full Stack Threads Clone',
-        description: 'Created a full-stack replica of the popular discussion platform "Threads," enabling users to post and engage in threaded conversations.',
-        link: 'https://github.com/Smridul3004/Alumni-Connect-Platform',
-    },
-    {
-        iconUrl: car,
+        iconUrl: LNMIIT,
         theme: 'btn-back-blue',
-        name: 'Car Finding App',
-        description: 'Designed and built a mobile app for finding and comparing cars on the market, streamlining the car-buying process.',
-        link: 'https://github.com/adrianhajdin/project_next13_car_showcase',
+        name: 'Alumni Connect Platform',
+        description: 'A comprehensive alumni portal for LNMIIT, enabling alumni to connect, share experiences, and stay updated with their alma mater.',
+        link: 'https://github.com/Smridul3004/Alumni-Connect-Platform',
     },
     {
         iconUrl: snapgram,
         theme: 'btn-back-pink',
-        name: 'Full Stack Instagram Clone',
-        description: 'Built a complete clone of Instagram, allowing users to share photos and connect with friends in a familiar social media environment.',
-        link: 'https://github.com/adrianhajdin/social_media_app',
+        name: 'Instagram Saved Content Analyzer Chrome Extension',
+        description: 'The Instagram Saved Content Analyzer is a RAG (Retrieval-Augmented Generation) based Chrome extension that helps users analyze and query their saved Instagram posts and reels. ',
+        link: 'https://github.com/Smridul3004/Instagram-Saved-Content-Analyzer-Chrome-Extension',
     },
-    {
-        iconUrl: estate,
-        theme: 'btn-back-black',
-        name: 'Real-Estate Application',
-        description: 'Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.',
-        link: 'https://github.com/adrianhajdin/projects_realestate',
-    },
-    {
-        iconUrl: summiz,
-        theme: 'btn-back-yellow',
-        name: 'AI Summarizer Application',
-        description: 'App that leverages AI to automatically generate concise & informative summaries from lengthy text content, or blogs.',
-        link: 'https://github.com/adrianhajdin/project_ai_summarizer',
-    }
+    // {
+    //     iconUrl: estate,
+    //     theme: 'btn-back-black',
+    //     name: 'Real-Estate Application',
+    //     description: 'Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.',
+    //     link: 'https://github.com/adrianhajdin/projects_realestate',
+    // },
+    // {
+    //     iconUrl: summiz,
+    //     theme: 'btn-back-yellow',
+    //     name: 'AI Summarizer Application',
+    //     description: 'App that leverages AI to automatically generate concise & informative summaries from lengthy text content, or blogs.',
+    //     link: 'https://github.com/adrianhajdin/project_ai_summarizer',
+    // }
 ];

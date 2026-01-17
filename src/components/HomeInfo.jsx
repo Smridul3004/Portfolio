@@ -10,7 +10,7 @@ const HomeInfo = ({ currentStage }) => {
                 <span className='font-semibold mx-2 text-white'>Mridul</span>
                 👋
                 <br />
-                A Software Engineer from India
+                A Software Developer from India
             </h1>
         );
 
@@ -18,7 +18,7 @@ const HomeInfo = ({ currentStage }) => {
         return (
             <div className='info-box'>
                 <p className='font-medium sm:text-xl text-center'>
-                    Worked with many companies <br /> and picked up many skills along the way
+                    Have diverse experience <br /> and picked up many skills along the way
                 </p>
 
                 <Link to='/about' className='neo-brutalism-white neo-btn'>
@@ -33,7 +33,7 @@ const HomeInfo = ({ currentStage }) => {
         return (
             <div className='info-box'>
                 <p className='font-medium text-center sm:text-xl'>
-                    Led multiple projects to success over the years. <br /> Curious about the impact?
+                    Created multiple projects to success over the years. <br /> Curious about the impact?
                 </p>
 
                 <Link to='/projects' className='neo-brutalism-white neo-btn'>
