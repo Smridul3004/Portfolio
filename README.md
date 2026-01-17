@@ -148,7 +148,44 @@ Check code quality:
 npm run lint
 ```
 
-## 📄 Pages
+## � Deployment
+
+### Render Deployment
+
+This project is deployed on **Render**. To handle client-side routing for this SPA, configure redirects in Render's dashboard:
+
+**Setting Up Redirect Rules:**
+1. Go to your service settings on Render
+2. Navigate to **Redirect/Rewrite Rules**
+3. Add a new rule:
+   - **Source**: `/*`
+   - **Destination**: `/index.html`
+   - **Action**: `Rewrite`
+4. Click **Add Rule** and **Save Changes**
+
+This ensures page refreshes work correctly on any route (e.g., `/about`, `/projects`, `/contact`).
+
+**Deployment Configuration:**
+- **Build Command**: `npm run build`
+- **Publish Directory**: `dist`
+
+**To Deploy Your Own:**
+
+1. **Push to GitHub**
+   ```bash
+   git add .
+   git commit -m "Deploy to Render"
+   git push origin main
+   ```
+
+2. **Create a new Web Service on Render**
+   - Connect your GitHub repository
+   - Set build command: `npm run build`
+   - Set publish directory: `dist`
+   - Add redirect rule as shown above
+   - Deploy!
+
+## �📄 Pages
 
 ### Home (`/`)
 - Interactive 3D island environment
