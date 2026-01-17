@@ -1,13 +1,12 @@
 import { React, useRef, useEffect, use } from 'react'
 import { useAnimations, useGLTF } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
-import birdScene from '../assets/3d/bird.glb'
 
 const Bird = () => {
     const birdRef = useRef();
 
     // Load the 3D model and animations from the provided GLTF file
-    const { scene, animations } = useGLTF(birdScene);
+    const { scene, animations } = useGLTF('/bird.glb');
 
     // Get access to the animations for the bird
     const { actions } = useAnimations(animations, birdRef);
